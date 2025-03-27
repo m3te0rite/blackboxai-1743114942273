@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertilization Services | GreenCare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="services.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">GreenCare</div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="services-dropdown">
+                        <a href="#services">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="lawn-mowing.html">Lawn Mowing</a></li>
+                            <li><a href="landscaping.html">Landscaping</a></li>
+                            <li><a href="fertilization.html" class="active">Fertilization</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Service Hero -->
+    <section class="service-hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1600566752355-35792bedcfea')">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Professional Fertilization</h1>
+                <p>Nourish your lawn for optimal health and beauty</p>
+                <a href="../index.html#contact" class="btn">Schedule Treatment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="service-details">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Fertilization Services</h2>
+                <p>Custom nutrient programs for your specific grass type</p>
+            </div>
+
+            <div class="details-grid">
+                <div class="details-content">
+                    <h3>Service Details</h3>
+                    <p>Our fertilization program includes soil testing, customized nutrient blends, and scheduled applications throughout the growing season. We use premium, slow-release fertilizers that feed your lawn gradually for sustained growth without excessive surges.</p>
+                    
+                    <h3>Service Benefits</h3>
+                    <ul>
+                        <li>Healthier, greener grass</li>
+                        <li>Reduced weed growth</li>
+                        <li>Improved drought resistance</li>
+                        <li>Customized for your soil type</li>
+                        <li>Environmentally responsible formulas</li>
+                    </ul>
+
+                    <h3>Pricing Options</h3>
+                    <div class="pricing-table">
+                        <div class="pricing-tier">
+                            <h4>Basic</h4>
+                            <p>3 seasonal treatments</p>
+                            <div class="price">$120/year</div>
+                        </div>
+                        <div class="pricing-tier">
+                            <h4>Standard</h4>
+                            <p>5 treatments + weed control</p>
+                            <div class="price">$200/year</div>
+                        </div>
+                        <div class="pricing-tier">
+                            <h4>Premium</h4>
+                            <p>7 treatments + full analysis</p>
+                            <div class="price">$300/year</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details-gallery">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3" alt="Lawn before fertilization" style="width:100%;border-radius:8px;margin-bottom:20px;">
+                    <img src="https://images.unsplash.com/photo-1600566752229-2506a2151b0e" alt="Lawn after fertilization" style="width:100%;border-radius:8px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (copy from index.html) -->
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const servicesDropdown = document.querySelector('.services-dropdown');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            
+            // Close dropdown when mobile menu is closed
+            if (!navLinks.classList.contains('active')) {
+                dropdownMenu.classList.remove('active');
+            }
+        });
+
+        // Mobile dropdown toggle
+        servicesDropdown.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                dropdownMenu.classList.toggle('active');
+            }
+        });
+    </script>
+</body>
+</html>
